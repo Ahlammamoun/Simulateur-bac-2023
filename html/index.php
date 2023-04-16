@@ -108,15 +108,15 @@ if (!empty($_POST)) {
         $resultHT = additionHistoireTerminale($premierTrimestreTerminaleH, $deuxiemeTrimestreTerminaleH, $troisiemeTrimestreTerminaleH);
         $resultAT = additionAnglaisTerminale($premierTrimestreAnglaisT, $deuxiemeTrimestreAnglaisT, $troisiemeTrimestreAnglaisT);
         $resultET = additionEspagnolTerminale($premierTrimestreEspagnolTerminale, $deuxiemeTrimestreEspagnolT, $troisiemeTrimestreEspagnolT);
-        $resultEpsT = additionEpsTerminale($premierTrimestreEpsT, $dexiemeTrimestreEpsT, $troisiemeTrimestreEpsT );
-        $resultEsT = additionEsTerminale($premierTrimestreEsT, $dexiemeTrimestreEsT, $troisiemeTrimestreEsT );
+        $resultEpsT = additionEpsTerminale($premierTrimestreEpsT, $dexiemeTrimestreEpsT, $troisiemeTrimestreEpsT);
+        $resultEsT = additionEsTerminale($premierTrimestreEsT, $dexiemeTrimestreEsT, $troisiemeTrimestreEsT);
         $noteEMCT = noteEMCT($noteEMCT);
         $resultEpreuveT = additionEpreuveTerminale($philoT, $spe2T, $spe3T, $grandOral);
         $resultOptionT = additionOptionTerminale($option1T, $option2T, $latinT, $grecT);
         $moyenneG = moyenneG($resultH, $resultA, $resultE, $resultES, $noteEMC, $resultSPE1, $resultEpreuveTerminale, $resultHT, $resultAT, $resultET, $resultEpsT, $resultEsT, $noteEMCT, $resultEpreuveT, $resultOptionT);
         //$resultPhiloT = noteDePhilo($philoT);
         //$resultSpe1EtSpe2 = additionSpe1EtSpe2($spe2T, $spe3T);
-       // $noteGrandOral = noteGrandOral($grandOral);
+        // $noteGrandOral = noteGrandOral($grandOral);
 
         
     }
@@ -146,9 +146,11 @@ if (!empty($_POST)) {
 
 
 <body>
+  <h2 class="text-center text-uppercase font-weight-bold">Simulateur de moyenne au bac général 2023-2024</h2>
 <div class="container">
+
 <div class="">
-<p class="text-danger bg-dark "> votre moyenne est de <?= $moyenneG ?>/20</p>
+<p class="text-danger"> votre moyenne est de <?= $moyenneG ?>/20</p>
 <h1 class="container">Première</h1>
   <legend class="container">Contrôle continu</legend>
 
@@ -448,7 +450,7 @@ if (!empty($_POST)) {
             </div>
           </fieldset><br>
 
-           <button>Calculer de la moyenne</button>
+           <button class="w-100">Calculer de la moyenne</button>
     
     </form>
 </div>
