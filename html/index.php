@@ -247,8 +247,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne" for="moyenne">Moyenne</label>
-                <input class="moyenne" type="text" placeholder="<?=  $resultHT ?>">
-            </div>
+                <input class="moyenne" type="text" placeholder="">
           </fieldset><br>
        
           <fieldset class="anglais">
@@ -267,7 +266,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_anglais" for="moyenne">Moyenne</label>
-                <input class="moyenne_anglais" type="text" placeholder="<?=  $resultA ?>">
+                <input class="moyenne_anglais" type="text" placeholder="">
             </div>
           </fieldset><br>
        
@@ -287,7 +286,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_espagnol" for="moyenne">Moyenne</label>
-                <input class="moyenne_espagnol" type="text" placeholder="<?=  $resultE ?>">
+                <input class="moyenne_espagnol" type="text" placeholder="">
             </div>
           </fieldset><br>
 
@@ -307,7 +306,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_enseignement_scientifique" for="moyenne">Moyenne</label>
-                <input class="moyenne_enseignement_scientifique" type="text" placeholder="<?=  $resultES ?>">
+                <input class="moyenne_enseignement_scientifique" type="text" placeholder="">
             </div>
           </fieldset><br>
 
@@ -319,7 +318,7 @@ if (!empty($_POST)) {
             </div>
               <div class="form-group">
                 <label class="moyenne_enseignement_civique" for="moyenne">Moyenne</label>
-                <input class="moyenne_enseignement_civique" type="text" placeholder="<?=  $noteEMC ?>">
+                <input class="moyenne_enseignement_civique" type="text" placeholder="">
             </div>
           </fieldset><br>
 
@@ -339,7 +338,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_spe1" for="moyenne">Moyenne</label>
-                <input class="moyenne_spe1" type="text" placeholder="<?=  $resultSPE1 ?>">
+                <input class="moyenne_spe1" type="text" placeholder="">
             </div>
           </fieldset><br>
 

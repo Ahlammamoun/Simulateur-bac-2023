@@ -7,49 +7,51 @@ div {
     margin: 120px;
 }
 fieldset {
-    width: 30%;
-    background-color: rgb(228, 115, 138);
-    border: solid 2px;
+  
+    background-color:#FFB6C1;
+    border: solid 4px;
     border-radius: 5%;
-    width: min-content
+    width: 30em;
+    height: 30em;
 }
 
 fieldset.anglais {
-    width: 30%;
-    background-color: rgb(114, 192, 24);
-    border: solid 2px;
+    
+    background-color: #90EE90;
+    border: solid 4px;
     border-radius: 5%;
-    width: min-content
+   
 }
 
 fieldset.espagnol {
-    width: 30%;
-    background-color: rgb(6, 70, 112);
-    border: solid 2px;
+   
+    background-color:#48D1CC;
+    border: solid 4px;
     border-radius: 5%;
-    width: min-content
+  
 }
 
 fieldset.enseignement_scientifque {
-    width: 30%;
-    background-color: rgb(143, 10, 155);
-    border: solid 2px;
+
+    background-color:#9370DB
+    ;
+    border: solid 4px;
     border-radius: 5%;
-    width: min-content
+   
 }
 
 fieldset.enseignement_civique{
-    width: 30%;
-    background-color: rgb(247, 114, 53);
-    border: solid 2px;
+    
+    background-color: #D8BFD8;
+    border: solid 4px;
     border-radius: 5%;
-    width: min-content
+   
 }
 fieldset.spe1{
-    width: 30%;
-    background-color: rgba(53, 247, 215, 0.521);
-    border: solid 2px;
-    width: min-content
+   
+    background-color: #87CEEB;
+    border: solid 4px;
+    
 }
 
 label.moyenne_anglais {
