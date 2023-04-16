@@ -5,7 +5,7 @@
 function additionHistoire($premierTrimestreHistoire, $deuxiemeTrimestreHistoire, $troisiemeTrimestreHistoire)
 {
 
-    $result = ($premierTrimestreHistoire + $deuxiemeTrimestreHistoire + $troisiemeTrimestreHistoire) * 3;
+    $result = (($premierTrimestreHistoire + $deuxiemeTrimestreHistoire + $troisiemeTrimestreHistoire) * 3) / 9 ;
 
 
    return $result;
@@ -52,3 +52,64 @@ function additionEpreuveTerminaleFrancais($epreuveTerminaleFrancaisEcrit, $epreu
    return $result;
 
 }
+
+function additionHistoireTerminale($premierTrimestreTerminaleH, $deuxiemeTrimestreTerminaleH, $troisiemeTrimestreTerminaleH)
+{
+    $result = ($premierTrimestreTerminaleH + $deuxiemeTrimestreTerminaleH + $troisiemeTrimestreTerminaleH) * 3;
+   return $result;
+
+}
+function additionAnglaisTerminale($premierTrimestreAnglaisT, $deuxiemeTrimestreAnglaisT, $troisiemeTrimestreAnglaisT)
+{
+    $result = ($premierTrimestreAnglaisT + $deuxiemeTrimestreAnglaisT + $troisiemeTrimestreAnglaisT) * 3;
+   return $result;
+
+}
+
+function additionEspagnolTerminale($premierTrimestreEspagnolTerminale, $deuxiemeTrimestreEspagnolT, $premierTrimestreEspagnolT)
+{
+    $result = ($premierTrimestreEspagnolTerminale + $deuxiemeTrimestreEspagnolT + $premierTrimestreEspagnolT) * 3;
+   return $result;
+
+}
+function additionEpsTerminale($premierTrimestreEpsT, $dexiemeTrimestreEpsT, $troisiemeTrimestreEpsT)
+{
+    $result = ($premierTrimestreEpsT + $dexiemeTrimestreEpsT + $troisiemeTrimestreEpsT) * 6;
+   return $result;
+
+}
+function additionEsTerminale($premierTrimestreEsT,  $dexiemeTrimestreEsT, $troisiemeTrimestreEsT)
+{
+    $result = ($premierTrimestreEsT + $dexiemeTrimestreEsT + $troisiemeTrimestreEsT) * 3;
+    return $result;
+
+}
+function noteEMCT($noteEMCT)
+{
+    $result = ($noteEMCT);
+    return $result;
+
+}
+function additionEpreuveTerminale($philoT, $spe2T, $spe3T, $grandOral)
+{
+
+    $result = ($philoT * 8 ) + ($spe2T * 16 ) + ($spe3T * 16 ) + ($grandOral * 10 );
+    return $result;
+
+};
+
+function  additionOptionTerminale($option1T, $option2T, $latinT, $grecT)
+{
+
+    $result = ($option1T + $option2T + $latinT + $grecT) * 2;
+    return $result; 
+
+};
+
+function moyenneG($resultH, $resultA, $resultE, $resultES, $noteEMC, $resultSPE1, $resultEpreuveTerminale, $resultHT, $resultAT, $resultET, $resultEpsT, $resultEsT, $noteEMCT, $resultEpreuveT, $resultOptionT)
+{
+
+    $result = (($resultH + $resultA + $resultE + $resultES  + $noteEMC + $resultSPE1 + $resultEpreuveTerminale  + $resultHT + $resultAT + $resultET + $resultEpsT + $resultEsT + $noteEMCT + $resultEpreuveT + $resultOptionT))  / 14 ;
+    return $result;
+
+};

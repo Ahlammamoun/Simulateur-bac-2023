@@ -20,13 +20,33 @@ if (!empty($_POST)) {
     $noteEMC = (int) $_POST['1eremc'] ?? false;
     $premierTrimestreSPE1 = (int) $_POST['1eresp1'] ?? false;
     $deuxiemeTrimestreSPE1 = (int) $_POST['2emesp1'] ?? false;
-    $troisiemeTrimestreSPE1 = (int) $_POST['3emesp1'] ?? false;
+    $troisiemeTrimestreSPE1 = (int) $_POST['3spe'] ?? false;
     $epreuveTerminaleFrancaisEcrit = (int) $_POST['francaisEcrit'] ?? false;
     $epreuveTerminaleFrancaisOral = (int) $_POST['francaisOral'] ?? false;
-   
-  
-
-
+    $premierTrimestreTerminaleH = (int) $_POST['1erhT'] ?? false;
+    $deuxiemeTrimestreTerminaleH = (int) $_POST['2emehT'] ?? false;
+    $troisiemeTrimestreTerminaleH = (int) $_POST['3emehT'] ?? false;
+    $premierTrimestreAnglaisT = (int) $_POST['1eraT'] ?? false;
+    $deuxiemeTrimestreAnglaisT = (int) $_POST['2emeaT'] ?? false;
+    $troisiemeTrimestreAnglaisT = (int) $_POST['3emeaT'] ?? false;
+    $premierTrimestreEspagnolTerminale = (int) $_POST['1ereT'] ?? false;
+    $deuxiemeTrimestreEspagnolT = (int) $_POST['2emeeT'] ?? false;
+    $troisiemeTrimestreEspagnolT = (int) $_POST['3emeeT'] ?? false;
+    $premierTrimestreEpsT = (int) $_POST['1epsT'] ?? false;
+    $dexiemeTrimestreEpsT = (int) $_POST['2epsT'] ?? false;
+    $troisiemeTrimestreEpsT = (int) $_POST['3epsT'] ?? false;
+    $premierTrimestreEsT = (int) $_POST['1eresT'] ?? false;
+    $dexiemeTrimestreEsT = (int) $_POST['2emesT'] ?? false;
+    $troisiemeTrimestreEsT = (int) $_POST['3emesT'] ?? false;
+    $noteEMCT = (int) $_POST['1eremcT'] ?? false;
+    $philoT = (int) $_POST['philo'] ?? false;
+    $spe2T = (int) $_POST['spe2'] ?? false;
+    $spe3T = (int) $_POST['spe3'] ?? false;
+    $grandOral = (int) $_POST['grandOral'] ?? false;
+    $option1T = (int) $_POST['option1T'] ?? false;
+    $option2T = (int) $_POST['option2'] ?? false;
+    $latinT = (int) $_POST['latinT'] ?? false;
+    $grecT = (int) $_POST['grecT'] ?? false;
 
     //I check the data , are they valid ?
     if (
@@ -47,10 +67,36 @@ if (!empty($_POST)) {
         $deuxiemeTrimestreSPE1 !== false &&
         $troisiemeTrimestreSPE1 !== false &&
         $epreuveTerminaleFrancaisEcrit !== false &&
-        $epreuveTerminaleFrancaisOral !== false
+        $epreuveTerminaleFrancaisOral !== false &&
+        $premierTrimestreTerminaleH !== false &&
+        $deuxiemeTrimestreTerminaleH !== false &&
+        $troisiemeTrimestreTerminaleH !== false &&
+        $premierTrimestreAnglaisT !== false &&
+        $deuxiemeTrimestreAnglaisT !== false &&
+        $troisiemeTrimestreAnglaisT !== false &&
+        $premierTrimestreEspagnolTerminale !== false &&
+        $deuxiemeTrimestreEspagnolT !== false &&
+        $troisiemeTrimestreEspagnolT !== false &&
+        $premierTrimestreEpsT !== false &&
+        $dexiemeTrimestreEpsT !== false &&
+        $troisiemeTrimestreEpsT !== false &&
+        $premierTrimestreEsT !== false &&
+        $dexiemeTrimestreEsT !== false &&
+        $troisiemeTrimestreEsT !== false &&
+        $noteEMCT !== false  &&
+        $philoT !== false &&
+        $spe2T !== false &&
+        $spe3T !== false &&
+        $grandOral !== false &&
+        $option1T !== false &&
+        $option2T !== false &&
+        $latinT !== false &&
+        $grecT !== false
 
+    
     ) {
 
+     
         //I initiate a variable and put in it , the function and the values of the three variables
         $resultH = additionHistoire($premierTrimestreHistoire, $deuxiemeTrimestreHistoire, $troisiemeTrimestreHistoire);
         $resultA = additionAnglais($premierTrimestreAnglais, $deuxiemeTrimestreAnglais, $troisiemeTrimestreAnglais);
@@ -59,9 +105,20 @@ if (!empty($_POST)) {
         $noteEMC = noteEMC($noteEMC);
         $resultSPE1 = additionSPE1($premierTrimestreSPE1, $deuxiemeTrimestreSPE1, $troisiemeTrimestreSPE1);
         $resultEpreuveTerminale = additionEpreuveTerminaleFrancais($epreuveTerminaleFrancaisEcrit, $epreuveTerminaleFrancaisOral);
-        var_dump($premierTrimestreSPE1);
-        var_dump($deuxiemeTrimestreSPE1);
-        var_dump($troisiemeTrimestreSPE1);
+        $resultHT = additionHistoireTerminale($premierTrimestreTerminaleH, $deuxiemeTrimestreTerminaleH, $troisiemeTrimestreTerminaleH);
+        $resultAT = additionAnglaisTerminale($premierTrimestreAnglaisT, $deuxiemeTrimestreAnglaisT, $troisiemeTrimestreAnglaisT);
+        $resultET = additionEspagnolTerminale($premierTrimestreEspagnolTerminale, $deuxiemeTrimestreEspagnolT, $troisiemeTrimestreEspagnolT);
+        $resultEpsT = additionEpsTerminale($premierTrimestreEpsT, $dexiemeTrimestreEpsT, $troisiemeTrimestreEpsT );
+        $resultEsT = additionEsTerminale($premierTrimestreEsT, $dexiemeTrimestreEsT, $troisiemeTrimestreEsT );
+        $noteEMCT = noteEMCT($noteEMCT);
+        $resultEpreuveT = additionEpreuveTerminale($philoT, $spe2T, $spe3T, $grandOral);
+        $resultOptionT = additionOptionTerminale($option1T, $option2T, $latinT, $grecT);
+        $moyenneG = moyenneG($resultH, $resultA, $resultE, $resultES, $noteEMC, $resultSPE1, $resultEpreuveTerminale, $resultHT, $resultAT, $resultET, $resultEpsT, $resultEsT, $noteEMCT, $resultEpreuveT, $resultOptionT);
+        //$resultPhiloT = noteDePhilo($philoT);
+        //$resultSpe1EtSpe2 = additionSpe1EtSpe2($spe2T, $spe3T);
+       // $noteGrandOral = noteGrandOral($grandOral);
+
+        
     }
 
    
@@ -91,7 +148,7 @@ if (!empty($_POST)) {
 <body>
 <div class="container">
 <div class="">
-
+<p class="text-danger bg-dark "> votre moyenne est de <?= $moyenneG ?>/20</p>
 <h1 class="container">Première</h1>
   <legend class="container">Contrôle continu</legend>
 
@@ -200,8 +257,8 @@ if (!empty($_POST)) {
                 <input type="number" class="2emesp1" name="2emesp1" id="2emesp1" placeholder="0">
               </div>
               <div class="form-group">
-                <label for="3emesp1">3e trimestre</label>
-                <input type="number" class="3emesp1" name="3emesp1" id="3emesp1" placeholder="0">
+                <label for="3spe">3e trimestre</label>
+                <input type="number" class="3spe" name="3spe" id="3spe" placeholder="0">
               </div>
               <div class="form-group">
                 <label class="moyenne_spe1" for="moyenne">Moyenne</label>
@@ -212,26 +269,27 @@ if (!empty($_POST)) {
           <fieldset class="epreuves_terminales">
             <h1>Epreuves terminales coef 5</h1>
             <div class="form-group">
-              <label for="francaisEcrit">Français<écrit</label>
+              <label for="francaisEcrit">Français</label>
               <input type="number" class="francaisEcrit" name="francaisEcrit" id="francaisEcrit" placeholder="0">
             </div>
             <div class="form-group">
-                <label for="francaisOral">2e trimestre</label>
+                <label for="francaisOral">Orale</label>
                 <input type="number" class="francaisOral" name="francaisOral" id="francaisOral" placeholder="0">
               </div>
               <div class="form-group">
                 <label class="moyenne_epreuvesTerminale" for="moyenne">Moyenne</label>
-                <input class="moyenne_moyenne_epreuvesTerminale" type="text" placeholder="<?=  $resultSPE1 ?>">
+                <input class="moyenne_epreuvesTerminale" type="text" placeholder="<?=  $resultEpreuveTerminale ?>">
             </div>
           </fieldset><br>
-</div>
 
-<div class="">
+      </div>
 
-<h1 class="container">Terminale</h1>
-  <legend class="container">Contrôle continu</legend>
+      <div class="">
 
-<fieldset>
+        <h1 class="container">Terminale</h1>
+          <legend class="container">Contrôle continu</legend>
+
+        <fieldset>
             <h1>Histoire-gépgraphie coef 3</h1>
             <div class="form-group">
               <label for="1erhT">1er trimestre</label>
@@ -247,7 +305,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne" for="moyenne">Moyenne</label>
-                <input class="moyenne" type="text" placeholder="">
+                <input class="moyenne" type="text" placeholder="<?=  $resultHT ?>">
           </fieldset><br>
        
           <fieldset class="anglais">
@@ -266,7 +324,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_anglais" for="moyenne">Moyenne</label>
-                <input class="moyenne_anglais" type="text" placeholder="">
+                <input class="moyenne_anglais" type="text" placeholder="<?= $resultAT ?>">
             </div>
           </fieldset><br>
        
@@ -286,7 +344,27 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_espagnol" for="moyenne">Moyenne</label>
-                <input class="moyenne_espagnol" type="text" placeholder="">
+                <input class="moyenne_espagnol" type="text" placeholder="<?= $resultET ?> ">
+            </div>
+          </fieldset><br>
+
+          <fieldset class="enseignement_scientifque">
+            <h1>EPS coef 6</h1>
+            <div class="form-group">
+              <label for="1epsT">1er trimestre</label>
+              <input type="number" class="1epsT" name="1epsT" id="1epsT" placeholder="0">
+            </div>
+            <div class="form-group">
+                <label for="2epsT">2e trimestre</label>
+                <input type="number" class="2epsT" name="2epsT" id="2epsT" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="3epsT">3e trimestre</label>
+                <input type="number" class="3epsT" name="3epsT" id="3epsT" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label class="moyenne_enseignement_scientifique" for="moyenne">Moyenne</label>
+                <input class="moyenne_enseignement_scientifique" type="text" placeholder="<?= $resultEpsT ?>">
             </div>
           </fieldset><br>
 
@@ -306,7 +384,7 @@ if (!empty($_POST)) {
               </div>
               <div class="form-group">
                 <label class="moyenne_enseignement_scientifique" for="moyenne">Moyenne</label>
-                <input class="moyenne_enseignement_scientifique" type="text" placeholder="">
+                <input class="moyenne_enseignement_scientifique" type="text" placeholder="<?=  $resultEsT ?>">
             </div>
           </fieldset><br>
 
@@ -318,35 +396,60 @@ if (!empty($_POST)) {
             </div>
               <div class="form-group">
                 <label class="moyenne_enseignement_civique" for="moyenne">Moyenne</label>
-                <input class="moyenne_enseignement_civique" type="text" placeholder="">
+                <input class="moyenne_enseignement_civique" type="text" placeholder="<?=  $noteEMCT ?>">
             </div>
           </fieldset><br>
 
-          <fieldset class="spe1">
-            <h1>EPS</h1>
+          <fieldset class="epreuves_terminales">
+            <h1>Epreuves terminales</h1>
             <div class="form-group">
-              <label for="1erepsT">1er trimestre</label>
-              <input type="number" class="1erepsT" name="1erepsT" id="1erepsT" placeholder="0">
+              <label for="philo">Philosophie coef 8</label>
+              <input type="number" class="philo" name="philo" id="philo" placeholder="0">
             </div>
             <div class="form-group">
-                <label for="2emeepsT">2e trimestre</label>
-                <input type="number" class="2emeepsT" name="2emeepsT" id="2emeepsT" placeholder="0">
+                <label for="spe2">Spécialité 2 coef 16</label>
+                <input type="number" class="spe2" name="spe2" id="spe2" placeholder="0">
               </div>
               <div class="form-group">
-                <label for="3emesp1">3e trimestre</label>
-                <input type="number" class="3emesp1" name="3emesp1" id="3emesp1" placeholder="0">
+                <label for="spe3">Spécialité 3 coef 16</label>
+                <input type="number" class="spe3" name="spe3" id="spe3" placeholder="0">
               </div>
               <div class="form-group">
-                <label class="moyenne_spe1" for="moyenne">Moyenne</label>
-                <input class="moyenne_spe1" type="text" placeholder="">
+                <label for="grandOral">Grand Oral coef 10</label>
+                <input type="number" class="grandOral" name="grandOral" id="grandOral" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label class="moyenne_epreuvesTerminale" for="moyenne">Moyenne</label>
+                <input class="moyenne_epreuvesTerminale" type="text" placeholder="<?=  $resultEpreuveT ?>">
             </div>
           </fieldset><br>
 
-
-
+          <fieldset class="options_premiere">
+            <h1>Options coef 2</h1>
+            <div class="form-group">
+              <label for="option1T">Option 1 </label>
+              <input type="number" class="option1T" name="option1T" id="option1T" placeholder="0">
+            </div>
+            <div class="form-group">
+                <label for="option2">Option 2</label>
+                <input type="number" class="option2" name="option2" id="option2" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="latinT">Latin</label>
+                <input type="number" class="latinT" name="latinT" id="latinT" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label for="grecT">Grec</label>
+                <input type="number" class="grecT" name="grecT" id="grecT" placeholder="0">
+              </div>
+              <div class="form-group">
+                <label class="moyenne_options" for="moyenne">Moyenne</label>
+                <input class="moyenne_options" type="text" placeholder="<?=  $resultOptionT ?>">
+            </div>
+          </fieldset><br>
 
            <button>Calculer de la moyenne</button>
-
+    
     </form>
 </div>
 </div>

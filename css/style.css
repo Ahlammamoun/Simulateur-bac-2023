@@ -53,6 +53,12 @@ fieldset.spe1{
     border: solid 4px;
     
 }
+fieldset.epreuves_terminales {
+  background-color: #87CEEB;
+    border: solid 4px
+
+}
+
 
 label.moyenne_anglais {
     background-color: rgb(6, 199, 6);
@@ -101,6 +107,14 @@ input.moyenne_espagnol {
     text-align: center;
 
 }
+label.moyenne_epreuvesTerminale {
+    background-color: rgb(6, 199, 6);
+    width: 121%;
+    border-radius: 24%;
+    border: solid 2px;
+    font-size: larger;
+}
+
 input.moyenne_anglais {
     background-color: rgb(46, 110, 26);
     width: 121%;
@@ -150,6 +164,17 @@ input.moyenne_spe1 {
     text-align: center;
 
 }
+input.moyenne_epreuvesTerminale {
+    background-color: rgba(17, 218, 177, 0.521);
+    width: 121%;
+    border-radius: 24%;
+    border: solid 2px;
+    font-size: larger;
+    font-weight: bold;
+    text-align: center;
+
+}
+
 label.moyenne {
     background-color: rgb(219, 50, 84);
     width: 121%;
