@@ -5,7 +5,7 @@
 function additionHistoire($premierTrimestreHistoire, $deuxiemeTrimestreHistoire, $troisiemeTrimestreHistoire)
 {
 
-    $result = (($premierTrimestreHistoire + $deuxiemeTrimestreHistoire + $troisiemeTrimestreHistoire) * 3) / 9 ;
+    $result = (($premierTrimestreHistoire + $deuxiemeTrimestreHistoire + $troisiemeTrimestreHistoire) * 3)  ;
 
 
    return $result;
@@ -109,7 +109,7 @@ function  additionOptionTerminale($option1T, $option2T, $latinT, $grecT)
 function moyenneG($resultH, $resultA, $resultE, $resultES, $noteEMC, $resultSPE1, $resultEpreuveTerminale, $resultHT, $resultAT, $resultET, $resultEpsT, $resultEsT, $noteEMCT, $resultEpreuveT, $resultOptionT)
 {
 
-    $result = (($resultH + $resultA + $resultE + $resultES  + $noteEMC + $resultSPE1 + $resultEpreuveTerminale  + $resultHT + $resultAT + $resultET + $resultEpsT + $resultEsT + $noteEMCT + $resultEpreuveT + $resultOptionT))  / 14 ;
+    $result = (($resultH + $resultA + $resultE + $resultES  + $noteEMC + $resultSPE1 + $resultEpreuveTerminale  + $resultHT + $resultAT + $resultET + $resultEpsT + $resultEsT + $noteEMCT + $resultEpreuveT + $resultOptionT))  / 184;
     return $result;
 
 };

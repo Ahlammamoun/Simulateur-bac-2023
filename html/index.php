@@ -150,7 +150,7 @@ if (!empty($_POST)) {
 <div class="container">
 
 <div class="">
-<p class="text-danger"> votre moyenne est de <?= $moyenneG ?>/20</p>
+<p class="text-danger"> votre moyenne est de <?= (round($moyenneG, 2)) ?>/20</p>
 <h1 class="container">Première</h1>
   <legend class="container">Contrôle continu</legend>
 
@@ -291,7 +291,7 @@ if (!empty($_POST)) {
         <h1 class="container">Terminale</h1>
           <legend class="container">Contrôle continu</legend>
 
-        <fieldset>
+        <fieldset class="hg">
             <h1>Histoire-gépgraphie coef 3</h1>
             <div class="form-group">
               <label for="1erhT">1er trimestre</label>
@@ -306,11 +306,11 @@ if (!empty($_POST)) {
                 <input type="number" class="3emehT" name="3emehT" id="3eme" placeholder="0">
               </div>
               <div class="form-group">
-                <label class="moyenne" for="moyenne">Moyenne</label>
+                <label class="moyenne_hg" for="moyenne">Moyenne</label>
                 <input class="moyenne" type="text" placeholder="<?=  $resultHT ?>">
           </fieldset><br>
        
-          <fieldset class="anglais">
+          <fieldset class="anglaisT">
             <h1>Langue vivante A coef 3</h1>
             <div class="form-group">
               <label for="1eraT">1er trimestre</label>
@@ -330,7 +330,7 @@ if (!empty($_POST)) {
             </div>
           </fieldset><br>
        
-          <fieldset class="espagnol">
+          <fieldset class="espagnolT">
             <h1>Langue vivante B coef 3</h1>
             <div class="form-group">
               <label for="1ereT">1er trimestre</label>
@@ -350,7 +350,7 @@ if (!empty($_POST)) {
             </div>
           </fieldset><br>
 
-          <fieldset class="enseignement_scientifque">
+          <fieldset class="enseignement_scientifqueT">
             <h1>EPS coef 6</h1>
             <div class="form-group">
               <label for="1epsT">1er trimestre</label>
@@ -370,7 +370,7 @@ if (!empty($_POST)) {
             </div>
           </fieldset><br>
 
-          <fieldset class="enseignement_scientifque">
+          <fieldset class="enseignement_scientifqueT">
             <h1>Enseignement scientifique coef 3</h1>
             <div class="form-group">
               <label for="1eresT">1er trimestre</label>
@@ -390,7 +390,7 @@ if (!empty($_POST)) {
             </div>
           </fieldset><br>
 
-          <fieldset class="enseignement_civique">
+          <fieldset class="enseignement_civiqueT">
             <h1>Enseignement moral et civique coef 1</h1>
             <div class="form-group">
               <label for="1eremcT">Note</label>

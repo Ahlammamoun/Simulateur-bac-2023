@@ -16,16 +16,18 @@ input {
     text-align: center;
     font-weight: bold;
     text-align: center;
+    
 
 }
 
 fieldset {
     text-align: center;
     background-color:#FFD700 ;
-    border: solid 4px;
+    border: solid 6px #87CEEB;
     border-radius: 5%;
     width: 30em;
     height: 40em;
+    color: black;
 }
 
 fieldset.anglais {
@@ -36,6 +38,13 @@ fieldset.anglais {
 
 }
 
+fieldset.anglaisT {
+
+    background-color: #87CEEB;
+    border: solid 6px #FFD700;
+    color: black;
+
+}
 fieldset.espagnol {
 
     background-color: #FFD700;
@@ -43,7 +52,13 @@ fieldset.espagnol {
     border-radius: 5%;
 
 }
+fieldset.espagnolT {
 
+    background-color: #87CEEB;
+    border: solid 6px #FFD700;
+    color: black;
+
+}
 fieldset.enseignement_scientifque {
 
     background-color: #FFD700;
@@ -59,19 +74,46 @@ fieldset.enseignement_civique {
     border-radius: 5%;
 
 }
+fieldset.enseignement_civiqueT {
+    background-color: #87CEEB;
+    border: solid 6px #FFD700;
+    color: black;
 
+}
+fieldset.enseignement_scientifqueT {
+    background-color: #87CEEB;
+    border: solid 6px #FFD700;
+    color: black;
+
+}
 fieldset.spe1 {
 
     background-color: #FFD700;
     border: solid 4px;
 
 }
+fieldset.hg {
+    background-color: #87CEEB;
+    border: solid 6px #FFD700;
+    color: black;
+
+}
 
 fieldset.epreuves_terminales {
     background-color: #87CEEB;
-    border: solid 4px
+    border: solid 6px #FFD700;
+    
 }
-
+label.moyenne_hg{
+    height: 3rem;
+    width: 27rem;
+    border-radius: 15px;
+    color: black;
+    text-align: center;
+    font-weight: bold;
+    background-color: #3092b9;
+    border: 2px solid black;
+}
 
 label.moyenne_anglais {
     height: 3rem;
@@ -81,7 +123,9 @@ label.moyenne_anglais {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
+    border: 2px solid black;
 }
+
 
 label.moyenne_espagnol {
     height: 3rem;
@@ -91,6 +135,7 @@ label.moyenne_espagnol {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
+    border: 2px solid black;
 }
 
 label.moyenne_enseignement_scientifique {
@@ -101,6 +146,7 @@ label.moyenne_enseignement_scientifique {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
+    border: 2px solid black;
 }
 
 label.moyenne_enseignement_civique {
@@ -111,6 +157,7 @@ label.moyenne_enseignement_civique {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
+    border: 2px solid black;
 }
 
 label.moyenne_spe1 {
@@ -121,6 +168,7 @@ label.moyenne_spe1 {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
+    border: 2px solid black;
 }
 
 label.moyenne_epreuvesTerminale {
@@ -130,6 +178,7 @@ label.moyenne_epreuvesTerminale {
     color: black;
     text-align: center;
     font-weight: bold;
+    border: 2px solid black;
 }
 
 input.moyenne_espagnol {
@@ -208,7 +257,7 @@ label.moyenne {
     text-align: center;
     font-weight: bold;
     background-color: #B8860B;
-
+    border: 2px solid black;
 }
 
 input.moyenne {
