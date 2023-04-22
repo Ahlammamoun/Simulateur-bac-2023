@@ -108,8 +108,26 @@ function  additionOptionTerminale($option1T, $option2T, $latinT, $grecT)
 
 function moyenneG($resultH, $resultA, $resultE, $resultES, $noteEMC, $resultSPE1, $resultEpreuveTerminale, $resultHT, $resultAT, $resultET, $resultEpsT, $resultEsT, $noteEMCT, $resultEpreuveT, $resultOptionT)
 {
-
+   
     $result = (($resultH + $resultA + $resultE + $resultES  + $noteEMC + $resultSPE1 + $resultEpreuveTerminale  + $resultHT + $resultAT + $resultET + $resultEpsT + $resultEsT + $noteEMCT + $resultEpreuveT + $resultOptionT))  / 184;
     return $result;
 
 };
+function mention($moyenne)
+{
+
+    if ($moyenne > 15){
+        $mention  ='Bravo , vous avez la mention très bien';
+       // echo '<h1 class=mention>   vous avez la mention très bien   </h1>';
+    }elseif($moyenne < 15 && $moyenne > 13 ){
+        //echo 'vous avez la mention bien';
+        $mention = 'Bien joué, vous avez la mention bien';
+    }else{
+      //echo 'loupé';
+      $mention = 'vous n\'avez pas de mention' ;
+    }
+    return $mention;
+
+
+}
+

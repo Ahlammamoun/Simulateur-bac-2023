@@ -117,11 +117,11 @@ if (!empty($_POST)) {
         //$resultPhiloT = noteDePhilo($philoT);
         //$resultSpe1EtSpe2 = additionSpe1EtSpe2($spe2T, $spe3T);
         // $noteGrandOral = noteGrandOral($grandOral);
-
+        $mention = mention($moyenneG);
+       
         
     }
 
-   
   
 
 }
@@ -151,6 +151,7 @@ if (!empty($_POST)) {
 
 <div class="">
 <p class="text-danger"> votre moyenne est de <?= (round($moyenneG, 2)) ?>/20</p>
+<p class="text-danger"><?= $mention ?></p>
 <h1 class="container">Première</h1>
   <legend class="container">Contrôle continu</legend>
 
